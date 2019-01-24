@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<questionCollection xmlns="http://www.example.org/palisade/questioncollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--**************************************************************-->
+	<!-- KOLOS 2012/2013 STRONA 1 PATRYK                              -->
+	<!--**************************************************************-->
+	<question value="Na podstawie wyniku zapytania SQL SELECT do tabel obejmujących 7 milionów rekordów, uzyskiwane jest 50 wierszy. Najsprawniejszego dalszego przetwarzania danych tych wierszy należy oczekiwać, gdy:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Wynik w/w zapytania jest udostępniany za pomocą widoku reprezentującego w/w zapytanie i przetwarzanie wykorzysta ten widok"/>
+		<answer correct="true" value="Wynik w/w zapytania będzie umieszczony w tabeli tymczasowej i przetwarzanie wykorzysta tę tabelę"/>
+	</question>
+	<question value="Utworzenie widoku CREATE VIEW testView as SELECT * FROM Orders powoduje:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Zaalokowanie dodatkowego obszaru w plikach bazy danych na kopię danych tabeli Orders, kopia ta będzie automatycznie aktualizowana przy zmianach w tabeli Orders"/>
+		<answer value="Zapisanie definicji widoku. W chwili wykoniania zapytania SELECT *, nastąpi zaalokowanie dodatkowego obszaru w plikach bazy danych na kopię danych tabeli Orders"/>
+		<answer value="Zaalokowanie dodatkowego obszaru w plikach bazy danych na kopię danych tabeli Orders, kopia ta nie będzie automatycznie aktualizowana przy zmianach w tabeli Orders"/>
+		<answer correct="true" value="Zapisanie definicji widoku. W chwili wykoniania zapytania SELECT *, nastąpi wykonanie odpowiedzi z wykorzystaniem aktualnych danych tabeli Orders"/>
+	</question>
+	<question value="W przypadku wykonania polecenia ROLLBACK:"> 
+		<!--WYDAJE SIĘ OK-->
+		<answer value="Zmiany wprowadzone we wszystkich transakcjach w trakcie realizacji (jeszcze niezakończonych poleceniem COMMIT) zostaną wycofane"/>
+		<answer value="Zmiany wprowadzone w innych transakcjach zakończonych poleceniem COMMIT mogą być utracone - jeśli były zapisane tylko w buforach pamięciowych"/>
+		<answer correct="true" value="Zmiany wprowadzone w bieżącej transakcji zostaną wycofane"/>
+		<answer value="Zmiany wprowadzone w innych transakcjach zakończonych poleceniem COMMIT zostaną wycofane"/>
+	</question>
+	<question value="W przypadku zastosowania poziomu izolacji transakcji READ UNCOMMITED:"> 
+		<!--WYDAJE SIĘ OK-->
+		<answer correct="true" value="Występuje ryzyko brudnych odczytów"/>
+		<answer correct="true" value="Występuje ryzyko zakleszczeń"/>
+		<answer correct="true" value="Występuje ryzyko niepowtarzalnych odczytów"/>
+		<answer value="Modyfikowane rekordy są blokowane"/>
+	</question>
+	<question value="Transakcja A wykonuje polecenie SQL UPDATE na rekordzie. W przypadku napotkania przez wykonywaną transakcję A na blokadę ustawioną przez inną transakcję B modyfikującą ten sam rekord:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Transakcja A musi oczekiwać na zakończenie transakcji B poprzez polecenie ROLLBACK lub COMMIT"/>
+		<answer value="Transakcja B musi oczekiwać na zakończenie transakcji A poprzez polecenie COMMIT"/>
+		<answer value="Jedna z aplikacji klienckich musi wstrzymać wykonanie transkacji poprzez polecenie SUSPEND"/>
+		<answer value="Jedna z transkacji jest wycofywana przez serwer bazy danych"/>
+		<answer value="Konieczna jest interwencja administratora bazy danych, by przywrócić działanie systemu"/>
+		<answer value="Jedna z transakcji wykonywała wyłącznie odczyt w trybie READ UNCOMMITED"/>
+	</question>
+	<question value="Indeks powinien zostać utworzony:"> 
+		<!--DO SPRAWDZENIA-->
+		<!--Slajd 15 z indeksów - FK nie muszą być selektywne, kolumny do wyszukiwań - hm?-->
+		<answer correct="true" value="Na kolumnach kluczy głównych - po jednym indeksie na klucz główny"/>
+		<answer value="Na kolumnach klucza głównego - po jednym indeksie na jedną kolumnę klucza głównego danej tabeli"/>
+		<answer value="Zawsze na kolumnach trójwartościowych"/>
+		<answer value="Na kolumnach klucza obcego - po jednym indeksie na dany klucz obcy danej tabeli, przy założeniu wysokiej selektywności klucza obcego"/>
+		<answer value="Zawsze na kolumnach często wykorzystywanych w operacjach wyszukiwania"/>
+		<answer value="Na kolumnach często wykorzystywanych w operacjach wyszukiwania - zależnie od ich selektywności"/>
+	</question>
+	<question value="Trigger może:">
+		<!--WYDAJE SIĘ OK-->
+		<answer value="Być automatycznie uruchamiany przez serwer po odczytaniu danych rekordu z bazy danych poprzez polecenie SQL SELECT"/>
+		<answer correct="true" value="Wykonywać polecenie UPDATE SQL na innej tabeli"/>
+		<answer value="Być wywołany przez polecenie EXEC TRIGGER"/>
+		<answer correct="true" value="Być wykonywany w efekcie operacji modyfikacji danych wykonywanych na bazie przez różne aplikacje klienckie"/>
+		<answer correct="true" value="Być automatycznie uruchamiany przez serwer po wstawieniu nowego rekordu do bazy danych"/>
+		<answer correct="true" value="Być automatycznie uruchamiany przez serwer zamiast wstawienia rekordu do bazy danych"/>
+	</question>
+	<question value="W sytuacji, gdy nie może być zapewnione stabilne łącze pomiędzy serwerami baz danych i konieczne jest nanoszenie tych samych zmian w tych serwerach baz danych, zalecane jest:">
+		<!-- DO SPRAWDZENIA -->
+		<!--Slajdy z Server Architecture - co do pierwszej odpowiedzi - hm, czy transakcja rozproszona jest przez aplikację kliencką zarządzana?-->
+		<answer correct="true" value="Wykonywanie dwóch transakcji przez aplikację kliencką - po jednej na każdym serwerze baz danych"/>
+		<answer value="Wykorzystanie puli połączeń do głównego serwera"/>
+		<answer correct="true" value="Wykorzystanie klastra serwerów"/>
+		<answer correct="true" value="Wykorzystanie mechanizmów replikacji"/>
+	</question>
+	<!--**************************************************************-->
+	<!-- KOLOS 2012/2013 STRONA 2 GRZESIEK                            -->
+	<!--**************************************************************-->
+	<question value="Normalizacja tabeli do trzeciej postaci normalnej:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Jest procesem o charakterze teoretycznym, pomijanym w praktycznych zastosowaniach"/>
+		<answer correct="true" value="Wymaga m. in. identyfikacji klucza głównego"/>
+		<answer value="Zawsze wymaga identyfikacji klucza obcego w tej tabeli"/>
+		<answer value="Dopuszcza wartości nieatomowe w kolumnach tabeli"/>
+		<answer value="Wymaga wcześniejszego uzyskania czwartej postaci normalnej"/>
+	</question>
+	<question value="Rezultatem porównania 'abc'=NULL jest:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="TRUE"/>
+		<answer value="Ponadto, rezultatem 'abc'&gt;NULL jest TRUE"/>
+		<answer value="NULL"/>
+		<answer correct="true" value="FALSE"/>
+		<answer correct="true" value="Ponadto, rezultatem 'abc'&gt;NULL jest FALSE"/>
+	</question>
+	<question value="W bazie danych pracowników należy przypisać aktualnego przełożonego (innego z pracowników) do każdego z pracowników z wyjątkiem prezesa firmy. W tym celu należy:">
+		<!--ODPOWIEDŹ Z TESTU 2014/2015-->
+		<answer correct="true" value="Dodać klucz obcy w tabeli pracowników, akceptujący wartość NULL"/>
+		<answer value="Dodać dodatkowy klucz obcy w tabeli pracowników nieakceptujący wartości NULL"/>
+		<answer value="Stworzyć dodatkową tabelę, by zawrzeć w/w informację"/>
+		<answer value="Stworzyć dodatkowy klucz główny w tabeli pracowników"/>
+	</question>
+	<question value="Liczba wierszy w wyniku zapytania SELECT * FROM TabelaA JOIN TabelaB ON 7=3 or 7&gt;1 będzie równa:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Liczbie rekordów w tabeli A"/>
+		<answer value="Liczbie rekordów w tabeli B"/>
+		<answer value="Zero"/>
+		<answer correct="true" value="Iloczynowi liczby rekordów w tabeli A i liczby rekordów w tabeli B"/>
+		<answer value="Sumie liczby rekordów w tabeli A i liczby rekordów w tabeli B"/>
+	</question>
+	<question value="Hurtownia danych:">
+		<!--UWAGA POPRAWIONE - ODPOWIEDŹ Z TESTU 2014/2015-->
+		<answer value="Zazwyczaj zawiera dane z krótszego okresu niż baza danych systemu OLTP"/>
+		<answer value="Zazwyczaj korzysta z identycznych struktur danych jak baza danych systemu OLTP"/>
+		<answer value="Zazwyczaj wykorzystuje bezpośrednio dane tabel systemu OLTP"/>
+		<answer value="Zazwyczaj wykorzystuje dane po transformacji z wykorzystaniem systemu BI"/>
+		<answer correct="true" value="Zazwyczaj wykorzystuje dane po transformacji z wykorzystaniem systemu ETL"/> 
+		<answer value="Zawiera dane z ostatniego roku działalności firmy - w celu zapewnienia wydajnej realizacji zapytań OLAP"/>
+		<answer value="Wykorzystuje dane dużych kolumn binarnych (np. zdjęcia produktów zapisane w formacie JPG)"/>
+		<answer value="Zawsze zawiera znormalizowane dane"/>
+	</question>
+	<question value="Utworzono tabele: PERSONS, z kluczem głównym PERSON_ID oraz BUS_LINES z kluczem głównym BUS_ID. Tabele te opisują osoby dojeżdżające do pracy komunikacją miejską oraz linie autobusowe. Ponadto stworzono tabelę PERSON_BUSES z kolumnami PERSON_ID i BUS_ID, ktorej celem jest zapewnienie informacji o liniach autobusowych, typowo wykorzystywanych przez daną osobę do dojazdu do pracy (czyli opisanie poprawnych kombinacji: osoba, linia). W opisanym modelu danych:">
+		<!--WYDAJE SIĘ OK-->
+		<answer value="Tabela PERSON_BUSES jest zbędna"/>
+		<answer value="W tabeli PERSON_BUSES są dwa klucze główne"/>
+		<answer correct="true" value="W tabeli PERSON_BUSES PERSON_ID to klucz obcy"/>
+		<answer correct="true" value="W tabeli PERSON_BUSES BUS_ID to klucz obcy"/>
+		<answer correct="true" value="W tabeli PERSON_BUSES należy utworzyć wspólny indeks dla kolumn PERSON_ID oraz BUS_ID"/>
+		<answer value="Należy stworzyć unikalny indeks dla kolumny BUS_ID"/> <!--W tabeli BUS_LINES, klastrowany-->
+		<answer value="Należy stworzyć dwa indeksy typu zgrupowanego (ang. clustered) w tabeli PERSON_BUSES"/>
+	</question>
+	<question value="Wartość NULL TO:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Wartość oznaczająca brak daty w przypadku pola typu data"/>
+		<answer value="Wartość 0 w przypadku pola typu liczba całkowita"/>
+		<answer value="Wartość, która powinna być dopuszczana każdorazowo, gdy jest taka możliwość"/>
+		<answer correct="true" value="Wartość, która powinna być dopuszczana tylko wtedy, gdy jest to konieczne"/>
+	</question>
+	<question value="Normalizacja tabeli do drugiej postaci normalnej:">
+		<!--ODPOWIEDŹ Z TESTU DO SPRAWDZENIA - OLAP / OLTP-->
+		<!--Slajd 6 Data Warehouse - sprawdzający pomylił OLAP i OLTP??-->
+		<answer value="Zgodnie z dobrymi praktykami, może być pominięta w systemach typu OLAP"/>
+		<answer value="Nie pozwala na zależność wartości kolumny od innych kolumn nie wchodzących w skład klucza głównego"/>
+		<answer correct="true" value="Ma na celu m.in. wyeliminowanie anomalii wynikających z redundancji w bazie danych"/>
+		<answer value="Może powodować zbędne tworzenie dodatkowych tabel"/>
+		<answer value="Dopuszcza wartości nieatomowe w rekordach tabeli"/>
+		<answer correct="true" value="Zgodnie z dobrymi praktykami, może być pominięta w systemach typu OLTP"/>
+	</question>
+	<question value="Normalizacja tabeli do pierwszej postaci normalnej:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Jest procesem o charakterze teoretycznym, pomijanym w praktycznych zastosowaniach"/>
+		<answer correct="true" value="Wymaga m. in. identyfikacji klucza głównego"/>
+		<answer value="Zawsze wymaga identyfikacji klucza obcego w tej tabeli"/>
+		<answer value="Dopuszcza wartości nieatomowe w kolumnach tabeli"/>
+		<answer value="Nie pozwala na zależność wartości kolumny od innych kolumn niewchodzących w skład klucza głównego"/>
+	</question>
+	<!--**************************************************************-->
+	<!-- KOLOS 2012/2013 STRONA 3 GRZESIEK                            -->
+	<!--**************************************************************-->
+	<question value="Zestawienie połączenia z aplikacji Java z bazą danych udostępnianą w modelu klient-serwer (np. z bazą Ms SQL Server lub Oracle) wymaga:">
+		<!--Na moje oko, slajdy z JDBC-->
+		<answer value="Znajomości języka SQL"/> <!--Raczej chodzi o samo nawiązanie połączenia-->
+		<answer correct="true" value="Utworzenia połączenia do bazy danych"/>
+		<answer correct="true" value="Pomyślnego wykonania autoryzacji"/>
+		<answer correct="true" value="Wskazania lokalizacji sieciowej systemu DBMS"/>
+		<answer correct="true" value="Wskazania sterownika wykorzystywanego do nawiązania połączenia"/>
+		<answer correct="true" value="Określenie parametrów połączenia sieciowego"/> <!--Co przez to rozumiemy? Np. wskazujemy port 1521-->
+	</question>
+	<question value="Statystyki zawarte w ramach bazy danych Oracle:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Nie powinny być stosowane, gdyż spowalniają wykonanie zapytań"/>
+		<answer correct="true" value="Powinny być stosowane, gdyż powodują przygotowanie lepszych planów wykonania zapytań"/>
+	</question>
+	<question value="Opcje audytu bazy danych Oracle umożliwiają:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Monitorowanie wykorzystania poszczególnych poleceń SQL"/>
+		<answer correct="true" value="Monitorowanie udanych prób połączenia z instancją"/>
+		<answer correct="true" value="Monitorowanie nieudanych prób połączenia z instancją"/>
+		<answer value="Są rozwiązaniem, które powinno być stosowane zamiast definiowania uprawnień do poszczególnych tabel"/>
+		<answer correct="true" value="Są rozwiązaniem, które powinno być stosowane równolegle z nadawaniem uprawnień do tabel"/>
+	</question>
+	<question value="Pula połączeń to sposób na:">
+		<!--ODPOWIEDŹ Z TESTU 2014/2015-->
+		<answer correct="true" value="Obniżenie obciążenia serwera otwieraniem i zamykaniem połączeń"/>
+		<answer correct="true" value="Poprawę wydajności aplikacji"/>
+		<answer value="Ograniczenie liczby aktywnych połączeń"/>
+		<answer value="Zmniejszenie liczby zapytań SQL przesyłanych przez jedno połączenie"/>
+		<answer value="Rezygnację ze stosowania zapytań SQL w odwołaniach do bazy danych"/>
+		<answer value="Rezygnację z wykorzystania transakcji"/>
+	</question>
+	<question value="Mapowanie obiektowo-relacyjne:">
+		<!-- DO SPRAWDZENIA -->
+		<answer value="Jest stosowane w obiektowych bazach danych"/>
+		<answer correct="true" value="Może ograniczyć ilość tworzonego przez programistę aplikacji kodu SQL"/>
+		<answer correct="true" value="Całkowicie eliminuje konieczność tworzenia kodu SQL w przypadku złożonych raportów"/>
+		<answer value="Jest rozwiązaniem wygodnym, ale utrudnia uzyskanie koniecznej wydajności obsługi transakcji"/> <!--??-->
+	</question>
+	<question value="Tabela zewnętrzna bazy danych Oracle:">
+		<!--UWAGA - POPRAWIONE (slajdy Oracle Loader), WYDAJE SIĘ OK-->
+		<answer value="Jest tym samym, co tabela tymczasowa bazy danych"/>
+		<answer correct="true" value="To sposób na wykonywanie zapytań SQL na danych zapisanych w zewnętrznym pliku tekstowym"/>
+		<answer value="Identycznie jak tabela tymczasowa może być zasilona wynikiem zapytania SQL SELECT kierowanego do standardowej tabeli bazy danych"/>
+		<answer value="Jest rozwiązaniem zalecanym w zastępstwie standardowych tabel dla utrzymywania głównych danych bazy"/>
+	</question>
+	<question value="Warstwy w systemach informacji przestrzennej dzielimy na:">
+		<!--WYDAJE SIĘ OK-->
+		<answer correct="true" value="Rastrowe"/>
+		<answer value="Relacyjne"/>
+		<answer correct="true" value="Wektorowe"/>
+		<answer value="Długotrwałe transakcyjne"/>
+	</question>
+	<!--**************************************************************-->
+	<!-- KOLOS 2012/2013 STRONA 4 MAJA                                -->
+	<!--**************************************************************-->
+	<!--TYLKO NIEPOWTARZAJĄCE SIĘ PYTANIA-->
+	<question value="W systemie bazy danych stwierdzono nieakceptowalną wydajność realizacji często wykonywanej sekwencji złożonych zapytań SQL SELECT. Potencjalnie korzystne działania to:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Dodanie nowych indeksów"/>
+		<answer value="Usunięcie istniejących indeksów"/>
+		<answer correct="true" value="Wprowadzenie procedury składowanej i umieszczenie w niej kodu zapytań SQL SELECT"/>
+		<answer value="Rezygnacja z użycia procedur składowanych"/>
+		<answer correct="true" value="Wprowadzenie wykorzystania puli połączeń"/>
+		<answer value="Rezygnacja ze stosowania puli połączeń"/>
+	</question>
+	<question value="W bazie danych Oracle:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Obsługa jednego połączenia może być realizowana przez na stałe przypisany proces serwerowy"/>
+		<answer correct="true" value="Obsługa jednego połączenia może być realizowana przez proces serwerowy, który na przemian obsługuje również inne polecenia"/>
+		<answer correct="true" value="Kopie bezpieczeństwa i operacje wsadowe powinny być wykonywane przez dedykowany proces serwera"/>
+		<answer value="Obsługa jednego połączenia musi być realizowana przez na stałe przypisany proces serwerowy"/>
+	</question>
+	<question value="Tabela Customers w kolumnie ContactName przyjmuje wartość NULL. Zapytanie SELECT * FROM Customers WHERE ContactName != NULL:">
+		<!--DOWIEDZIONE EKSPERYMENTALNIE-->
+		<answer value="Zostanie wykonane i ustali listę klientów z przypisaną osobą kontaktową"/>
+		<answer correct="true" value="Zostanie wykonane i nie ustali listy klientów z przypisaną osobą kontaktową"/>
+		<answer value="Nie zostanie wykonane i nie ustali listy klientów z przypisaną osobą kontaktową"/>
+		<answer value="Nie zostanie wykonane, ale ustali listę klientów z przypisaną osobą kontaktową"/>
+	</question>
+	<question value="W klastrze hot-failover:">
+		<!--WYDAJE SIĘ OK-->
+		<answer correct="true" value="Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery,"/>
+		<answer value="Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczy jeden serwer,"/>
+		<answer correct="true" value="Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery,"/>
+		<answer value="Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczy zawsze co najwyżej jeden serwer."/>
+	</question>
+	<question value="Z punktu widzenia fizycznej alokacji danych na dyskach, baza danych Oracle składa się z:">
+		<!--WYDAJE SIĘ OK-->
+		<answer value="Przestrzeni tabel, a te - z plików z logami transakcyjnymi"/>
+		<answer value="Plików z danymi, a te - z przestrzeni tabel"/>
+		<answer value="Segmentów"/>
+		<answer value="Plików poszczególnych tabel i widoków"/>
+		<answer correct="true" value="Przestrzeni tabel, a te - z plików z danymi"/>
+		<answer value="Danych logów transakcyjnych zapisanych w plikach Spfile"/>
+	</question>
+	<question value="W przypadku aplikacji klient-serwer (tzw. gruby klient) uruchomionej na 500 stacjach roboczych i komunikującej się bezpośrednio z serwerem bazy danych Oracle, zalecane jest użycie do nawiązywania połączeń:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Dedykowanych procesów serwera"/>
+		<answer value="Puli połączeń"/>
+		<answer correct="true" value="Dzielonych procesów serwera"/>
+		<answer value="Rezygnacja z wykorzystania poleceń SQL"/>
+	</question>
+	<!--**************************************************************-->
+	<!-- KOLOS 2014/2015 STRONA 1 MARCIN                              -->
+	<!--**************************************************************-->
+	<question value="W każdym wierszu tabeli lista użytych kolumn jest inna. Można również wstawić do tabeli wiersz, w którym użyjemy dowolnych, nowych nazw kolumn. Sytuacja taka oznacza, że tabela została stworzona:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="W relacyjnej bazie danych"/>
+		<answer value="W hurtowni danych"/>
+		<answer correct="true" value="W systemie NoSQL"/>
+	</question>
+	<question value="Diagramy ER:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Zawierają encje"/>
+		<answer correct="true" value="Zawierają relacje"/>
+		<answer correct="true" value="Opisują znaczenie relacji"/>
+		<answer value="Przedstawiają powiązania między tabelami, są to powiązania w całości inne niż definiowane przez klucze obce"/>
+	</question>
+	<question value="Relacja jeden do wielu między tabelą A i B jest reprezentowana poprzez:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Dodatkowe klucze obce w tabelach A i B"/>
+		<answer correct="true" value="Dodatkowy klucz obcy w tabeli B wskazujący na tabelę A"/>
+		<answer value="Dodatkowy klucz obcy w tabeli A wskazujący na tabelę B"/>
+		<answer value="Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B"/>
+		<answer value="Dodatkową tabelę C bez kluczy obcych"/>
+		<answer value="Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B i klucze obce w tabelach A i B"/>
+		<answer value="Dodatkową tabelę C bez kluczy obcych i klucze obce w tabelach A i B"/>
+	</question>
+	<question value="Należy ustalić listę klientów, którzy złożyli zamówienia w roku 1997. Zapytanie SELECT * FROM Customers WHERE EXISTS (SELECT * FROM Orders WHERE YEAR(OrderDate)=1997):">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Nie ustali prawidłowej listy klientów spełniających w/w warunek"/>
+		<answer value="Ustali prawidłową listę klientów spełniających w/w warunek"/>
+	</question>
+	<question value="Relacja wiele do wielu pomiędzy tabelą A i B jest reprezentowana poprzez:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Dodatkowe klucze obce w tabelach A i B"/>
+		<answer value="Dodatkowy klucz obcy w tabeli B wskazujący na tabelę A"/>
+		<answer value="Dodatkowy klucz obcy w tabeli A wskazujący na tabelę B"/>
+		<answer correct="true" value="Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B "/>
+		<answer value="Dodatkową tabelę C bez kluczy obcych"/>
+		<answer value="Dodatkową tabelę C z kluczami obcymi wskazującymi na tabele A i B i klucze obce w tabelach A i B"/>
+		<answer value="Dodatkową tabelę C bez kluczy obcych i klucze obce w tabelach A i B"/>
+	</question>
+	<question value="W kostce danych:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Typowo obecny jest wymiar typu czas"/>
+		<answer correct="true" value="Typowo obecna jest miara liczbowa typu suma"/>
+		<answer value="Wymiary sporadycznie mają postać hierarchiczną"/>
+		<answer value="Występują zawsze co najwyżej 3 wymiary"/>
+		<answer correct="true" value="Typowo występuje wiele wymiarów"/>
+	</question>
+	<question value="W przypadku baz danych Oracle:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Zapis do logów transakcyjnych następuje przed potwierdzeniem aplikacji klienckiej pomyślnego zakończenia transakcji"/>
+		<answer value="Wyłączenie zasilania serwera skutkuje utratą zmian wprowadzonych w ramach zakończonych transakcji"/>
+		<answer correct="true" value="Wyłączenie zasilania serwera skutkuje utratą zmian wprowadzonych w ramach transakcji w trakcie realizacji"/>
+		<answer value="Wyłączenie zasilania serwera gwarantuje, iż zarówno dane transakcji w trakcie realizacji, jak i już zakończonych nie zostaną utracone"/>
+	</question>
+	<question value="Polecenia sieciowe z instacją bazy danych Oracle:">
+		<!--POPRAWIONE - PRZEGAPIONA ODPOWIEDŹ Z TESTU-->
+		<answer value="Zawsze bazują na TCP/IP"/>
+		<answer correct="true" value="Mogą zapewniać automatyczną próbę połączenia z innym adresem IP procesu listenera, w przypadku, gdy podstawowy nie odpowiada"/>
+		<answer correct="true" value="Moga bazować na odwołaniu do plików konfiguracyjnych określających sposób nawiązywania danego połączenia np. decyzję o użyciu opcji load balance"/>
+	</question>
+	<!--**************************************************************-->
+	<!-- KOLOS 2014/2015 STRONA 2 KRZYSIEK                            -->
+	<!--**************************************************************-->
+	<question value="Wdrożenia rozwiązań określanych jako Big Data odznaczają się zazwyczaj wykorzystaniem danych:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="O znacznej wielkości mierzonej np w liczbie bajtów"/>
+		<answer value="O wyższej jakości niż w relacyjnych bazach danych"/>
+		<answer correct="true" value="O niższej jakości niż w relacyjnych bazach danych"/>
+		<answer value="O identycznej jakości jak w relacyjnych bazach danych; wdrożenia te zazwyczaj wykorzystują relacyjne bazy danych jako źródło większości danych"/>
+		<answer value="O wyłącznie postaci tabelarycznej"/>
+		<answer correct="true" value="O różnorodnej postaci, w tym np. wpisów na forach internetowych, czy też logów opisujących zachowania użytkowników w aplikacjach WWW"/>
+	</question>
+	<question value="Pliki logów transakcyjnych w systemie transakcyjnym:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Są konieczne do działania systemu"/>
+		<answer value="Są opcjonalne dla funkcjonowania systemu"/>
+		<answer correct="true" value="Mogą podlegać arhiwizacji"/>
+		<answer correct="true" value="Są wykorzystywane w trakcie odtwarzania bazy danych po awarii"/>
+	</question>
+	<question value="Baza danych:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Może obsługiwać różne zestawy znaków narodowych, ale konieczny jest wybór tylko jednego w chwili instalacji bazy danych"/>
+		<answer correct="true" value="Może obsługiwać różne zestawy znaków narodowych jednocześnie"/>
+		<answer correct="true" value="Może stosować więcej niż jeden zestaw znaków narodowych w tym samym czasie"/>
+	</question>
+	<question value="Systemy klasy NoSQL to:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Systemy relacyjne"/>
+		<answer value="Systemy bazujące na matematycznej teori NoSQL, stanowiącej rozwinięcie teori systemów relacyjnych"/>
+		<answer value="Systemy bazujące na matematycznej teori NoSQL, stanowiącej zanegowanie teori systemów relacyjnych"/>
+		<answer correct="true" value="Zazwyczaj systemy typu OpenSource"/>
+		<answer value="Systemy rozwijane w latach siedemdziesiątych XX wieku, przed sformułowaniem założeń języka SQL"/>
+	</question>
+	<question value="Następujące stwierdzenia prawidłowo opisują sposób traktowania wartości NULL:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Rezultatem porówania 'abc'=NULL jest TRUE"/>
+		<answer value="Rezultatem porówania 'abc'&gt;NULL jest TRUE"/>
+		<answer value="Rezultatem porówania 'abc'=NULL jest NULL"/>
+		<answer correct="true" value="Rezultatem porówania 'abc'=NULL jest FALSE"/>
+		<answer correct="true" value="Rezultatem porówania 'abc'&gt;NULL jest FALSE"/>
+	</question>
+	<question value="Polecenia CREATE TABLE:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Zawsze mają identyczną postać w każdym systemie RDBMS np. Oracle Database lub Ms SQL Server"/>
+		<answer correct="true" value="Mogą mieć różną postać w różnych systemach RDBMS np. Oracle Database lub Ms SQL Server"/>
+		<answer value="Mogą być stosowane do modyfikacji struktury tabeli"/>
+	</question>
+	<question value="Podjęto decyzję o indeksacji danych adresowych: miejscowość, ulica, nr_posesji. W tej sytuacji:">
+		<!--WYDAJE SIĘ OK??-->
+		<answer value="Utworzenie jednego indeksu (miejscowosc, ulica, nr_posesji) jest równoważne z utworzeniem dwóch indeksów (miejscowość) oraz (ulica, nr_posesji)"/>
+		<answer correct="true" value="Z punktu widzenia sortowania preferowane jest utworzenie jednego indeksu (miejscowosc, ulica, nr_posesji)"/>
+		<answer value="Z punktu widzenia sortowania preferowane jest utworzenie indeksu (miejscowosc) oraz indeksu (ulica, nr_posesji)"/>
+	</question>
+	<question value="W bazie danych Oracle odtwarzanie bazy danych po uszkodzeniu jednego z plików z danymi wymagać może użycia:">
+		<!--WYDAJE SIĘ OK-->
+		<!--Slajdy 30-31 Oracle Recovery - Jeśli w trybie NOARCHIVELOG, to backup (kopia bezpieczeństwa, wpp. archive log-->
+		<!--Z dokumentacji Oracle (archive log jako szczególny przypadek redo log): During crash, instance, or media recovery, the database properly applies redo log files in ascending order by using the log sequence number of the necessary archived and redo log files.-->
+		<!--W razie czego jest się z czym wykłócać ;-) -->
+		<answer correct="true" value="Plików kopii bezpieczeństwa"/>
+		<answer correct="true" value="Plików logów transakcyjnych w trybie on-line (ang. redo log)"/>
+		<answer correct="true" value="Plików archiwalnych logów transakcyjnych (ang. archive log)"/>
+	</question>
+	<question value="Nawiązanie nowego połączenia sieciowego z bazą danych Oracle:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Typowo bazuje na połączeniu TCP/IP, z wykorzystaniem portu 1521"/>
+		<answer correct="true" value="Wymaga obecności procesu listenera"/>
+		<answer value="Musi wykorzystywać protokół TCP/IP"/>
+		<answer correct="true" value="Można w sposób automatyczny odwoływać się do różnych procesów listenera, np. by zapewnić odporność na awarie"/>
+	</question>
+	<question value="Pod pojęciem rozwiązań NoSQL rozumiane są m.in. systemy utrzymujące zasoby danych w postaci:">
+		<!--POPRAWIONE - PRZEGAPIONA ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Dokumentów"/>
+		<answer correct="true" value="Grafów"/>
+		<answer value="Relacyjnych baz danych"/>
+		<answer value="Wierszy opisanych kolumnami, w tym kluczami obcymi, których poprawność jest weryfikowana przy każdym zapisie przez system"/>
+		<answer correct="true" value="Wierszy opisanych kolumnami, potencjalnie różnymi w każdym wierszu"/>
+	</question>
+	<!--**************************************************************-->
+	<!-- KOLOS 2014/2015 STRONA 3 i 4 ARTUR                           -->
+	<!--**************************************************************-->
+	<question value="W bazie danych utworzono tabelę z kluczem głownym typu int, którego wartość ma być nadawana automatycznie jako unikalna liczba całkowita. W tej sytuacji rozwiązanie wydajne i skuteczne to:">
+		<!--WYDAJE SIĘ OK-->
+		<answer value="Wyznaczanie wartości klucza głównego poprzez wyznacznie największej wartości z już obecnych w kolumnie klucza głownego i zwiększanie tej wartości o 1"/>
+		<answer value="Zastosowanie dodatkowej tabeli z rekordami numeratorów"/>
+		<answer correct="true" value="Zastosowanie mechanizmu IDENTITY"/>
+	</question>
+	<question value="W przypadku wykonania polecenia ROLLBACK:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Wycofane zostaną zmiany w bazie danych wynikające z poleceń SQL INSERT i objęte zakresem transakcji"/>
+		<answer correct="true" value="Wycofane zostaną zmiany w bazie danych wynikające z poleceń SQL UPDATE i objęte zakresem transakcji"/>
+		<answer correct="true" value="Wycofane zostaną zmiany w bazie danych wynikające z poleceń SQL DELETE i objęte zakresem transakcji"/>
+		<answer value="Wycofane zostaną zmiany w bazie danych wynikające z zakleszczonych transakcji"/>
+		<answer value="Potwierdzone zostaną zmiany w kluczach obcych wszystkich rekordów, a modyfikowane rekordy, utworzone przed rozpoczeciem transakcji, zostaną usunięte"/>
+	</question>
+	<question value="Przykłady bazy danych to:">
+		<!--UWAGA - POPRAWIONE - WYDAJE SIĘ OK -->
+		<answer value="Kolekcja dokumentów MS Word"/>
+		<answer correct="true" value="Kolekcja plików tekstowych"/> 
+		<!--Flat file DB = text / binary file (files??) np. /etc/passwd w Linuxach-->
+		<answer correct="true" value="Relacyjna baza danych"/>
+		<answer correct="true" value="Obiektowa baza danych"/>
+	</question>
+	<question value="Stworzono warstwę wektorową typu wielobok. Obiekt tej warstwy jest definiowany poprzez:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Lokalizację zdefiniowaną zawsze w tym samym, wspólnym dla wszyskich systemów GIS, układzie współrzędnych"/>
+		<answer correct="true" value="Atrybuty opisowe"/>
+		<answer correct="true" value="Lokalizację zdefiniowaną w wybranym układzie współrzędnych opisaną przez współrzędne wierzchołków"/>
+	</question>
+	<question value="Polecenie SHUTDOWN ABORT:">
+`		<!--WYDAJE SIĘ OK-->	
+		<answer value="Może uszkodzić dane"/>
+		<answer value="Jest zalecane w przypadku, gdy chcemy zapewnić możliwość zakończenia przez użytkowników pracy z bazą danych"/>
+		<answer correct="true" value="Nie jest zalecane w przypadku, gdy chcemy zapewnić możliwość zakończenia przez użytkowników pracy z bazą danych"/>
+		<answer value="Może powodować wydłużone oczekiwanie na zakończenie pracy instancji bazy danych"/>
+		<answer correct="true" value="Może powodować wydłużone oczekiwanie na kolejne uruchomienie instancji bazy danch"/>
+	</question>
+	<question value="Z punktu widzenia wydajności przetwarzania danych przez wielu użytkowników systemów transakcyjnego, np. Ms SQL Serwer:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Wskazane są liczne transakcje o krótkim czasie realizacji"/>
+		<answer value="Wskazana jest niewielka liczba transakcji o czasie realizacji rzędu dziesiątek minut"/>
+		<answer value="W przetwarzaniu danych operacji finansowo-księgowych zaleca się rezygnację z użycia transakcji, czyli wykonywanie i zatwierdzanie każdego polecenia SQL osobno"/>
+	</question>
+	<question value="W klastrze cold-failover:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery,"/>
+		<answer correct="true" value="Przed wystąpieniem awarii w przetwarzaniu zapytań SQL uczestniczy jeden serwer,"/>
+		<answer value="Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczą wszystkie serwery,"/>
+		<answer correct="true" value="Po wystąpieniu awarii w przetwarzaniu zapytań SQL uczestniczy zawsze co najwyżej jeden serwer."/>
+	</question>
+	<question value="Archiwizacja logów transakcyjnych Oracle:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Jest zalecana w produkcyjnych systemach (wykorzystywanych do bieżącej obsługi procesów przedsiębiorstwa),"/>
+		<answer value="Nie jest zalecana w produkcyjnych systemach (wykorzystywanych do bieżącej obsługi procesów przedsiębiorstwa)"/>
+		<answer correct="true" value="Pozwala na odtworzenie bazy danych do dowolnego momentu w czasie,"/>
+		<answer value="Eliminuje potrzebę wykonywania kopii bezpieczeństwa bazy danych"/>
+		<answer value="Eliminuje potrzebę uruchamiania opcji audytu."/>
+	</question>
+	<question value="Polecenie ALTER TABLE:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Może zmienić dowolne cechy tabeli"/>
+		<answer correct="true" value="Może zmienić tylko niektóre cechy tabeli, część cech nie może być zmieniona przez to polecenie"/>
+		<answer correct="true" value="Może być użyte do dodania kolumny"/>
+		<answer correct="true" value="Może być użyte do wydłużenia kolumny tekstowej"/>
+	</question>
+	<question value="Wykonano pomyślnie polecenia BEGIN TRANSACTION, INSERT, UPDATE, COMMIT. Serwer potwierdził wykonanie wszystkich poleceń. W tej sytuacji:">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer correct="true" value="Zarówno polecenie INSERT jak i UPDATE zostało wykonane pomyślnie "/>
+		<answer value="Istnieje ryzyko, iż tylko polecenie UPDATE zostało wykonane"/>
+		<answer value="Jeśli wystąpi awaria zasilania serwera, to istnieje ryzyko, że jedna lub obie ze zmian były obecne tylko w buforach pamięciowych i zostaną utracone"/>
+	</question>
+</questionCollection>

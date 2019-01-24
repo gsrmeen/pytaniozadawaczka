@@ -1,0 +1,46 @@
+﻿<Window x:Class="Pytaniozadawaczka.Windows.PickFileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" WindowStyle="ToolWindow" Background="LightGray"
+        Title="" Height="300" Width="300" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock TextWrapping="WrapWithOverflow" FontSize="25" Name="lblHowMany"
+				   VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10"> 
+            Choose xml file
+        </TextBlock>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Width="250" Height="20" Name="txtInput" IsReadOnly="True" Foreground="Gray"/>
+            <Button Grid.Row="1" Width="100" Height="20"  Click="ChangePathClick" Name="btnChangePath"> Change...</Button>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" 
+				Click="ExitClick" Margin="5" Width="80" Height="40">
+                Exit
+            </Button>
+            
+            <Button Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" 
+				Click="OKClick" Margin="5" Width="80" Height="40">
+                OK
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
