@@ -1,21 +1,210 @@
 <?xml version="1.0"?>
 <questionCollection xmlns="http://www.example.org/palisade/questioncollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<!--**************************************************************-->
-	<!-- KOLOS z http://www.mini.pw.edu.pl/~kotowski/gk/GK1.pdf   1-15-->
+	<!-- Kolokwium z http://www.mini.pw.edu.pl/~kotowski/gk/GK1.pdf   -->
 	<!--**************************************************************-->
-	<question value=" Które zdania o skalowaniu obrazów są prawdziwe?">
-		<!--ODPOWIEDŹ Z TESTU-->
+	<question value="Które zdania o skalowaniu obrazów są prawdziwe?">
 		<answer value="Dowolne skalowanie może być zrealizowane jako złożenie trzech operacji Shear"/>
 		<answer correct="true" value="Główna pętla algorytmu musi być iterowana po pikselach obrazu wynikowego"/>
 		<answer value=" Współczynniki skalowania dla osi X i Y muszą być takie same"/>
 		<answer correct="true" value="Modyfikacja algorytmu Bresenhama może być wykorzystana przy skalowaniu"/>
 	</question>
 	
+	<question value="Filtry funkcyjne">
+		<answer correct="true" value="Umożliwiają zmianę nasycenia obrazu"/>
+		<answer correct="true" value="Umożliwiają zamianę jednego koloru na drugi"/>
+		<answer correct="true" value="Umożliwiają zmianę jasności obrazu"/>
+		<answer value="Opisane są funkcją, której argumentami są wartości sąsiednich pikseli "/>
+	</question>
 	
+	<question value="Metoda propagacji błedu">
+		<answer value="Błedy zaokrągleń powodują, że obraz jest zniekształcony"/>
+		<answer value="Najprostszym filtrem jest filtr złożony z samych jedynek"/>
+		<answer value="W prosty sposób może być zrównoleglona (równolegle na wielu punktach obrazu)"/>
+		<answer value="powoduje powstanie regularnych wzorów w wynikowym obrazie"/>
+	</question>
 	
+	<question value="Korekcja gamma w monitorach">
+		<answer value="Wynika z Prawa Webera-Fechnera"/>
+		<answer value="Oprócz wsp. gamma profil monitora zawiera jeszcze tylko współrzędne trójchromatyczne luminoforów "/>
+		<answer correct="true" value="Spowodowana jest nieliniowością toru wizyjnego"/>
+		<answer value="Wynika z nieliniowości przetwornika cyfrowo/analogowego"/>
+	</question>
 	
-	<!--**************************************************************-->
-	<!-- KOLOS z http://www.mini.pw.edu.pl/~kotowski/gk/GK1.pdf  15-30-->
-	<!--**************************************************************-->
+	<question value="Które zdania o odcieniach szarości są prawdziwe?">
+		<answer value="W modelu HLS dla odcieni szarości zachodzi H=S=V"/>
+		<answer value="Efekt pasm Macha można znacznie zmniejszyć stosując skalę logarytmiczną i korekcję gamma"/>
+		<answer value="Po wyrównaniu histogramu obraz jest w odcieniach szarości"/>
+		<answer correct="true" value="W skali logarytmicznej iloraz I(i+1)/I(i) jest stały"/>
+	</question>
 	
+	<question value="W algorytmie Liang-Barsky-ego obcinania wielokąta:">
+		<answer correct="true" value="Oknem obcinającym może być tylko prostokąt"/>
+		<answer correct="true" value="Punkty przecięcia krawędzi z prostymi obcinającymi klasyfikuje się jako punkty we/wy"/>
+		<answer value="Pomija się krawędzie poziome i pionowe"/>
+		<answer value="Każdy obszar narożny opisany jest kodem 4-ro bitowym"/>
+	</question>
+	
+	<question value="Które zadania o wykresie chromatyczności CIE XYZ są prawdziwe">
+		<answer correct="true" value="Podstawę podkowy tworzą barwy niespektralne"/>
+		<answer correct="true" value="Wszystkie widoczne barwy leżą wewnątrz podkowy"/>
+		<answer correct="true" value="Gamut monitora na wykresie jest zawsze trójkątem"/>
+		<answer correct="true" value="Wszystkie barwy nasycone leżą na brzegu podkowy"/>
+	</question>
+	
+	<!-- 9 -->
+	<question value="Poznane algorytmy wypełniania wielokątów metodą scan-linii">
+		<answer value="Dla każdej scanlinii potrzebują czasu liniowo zaleznego od liczby krawędzi wielokąta"/>
+		<answer correct="true" value="Wymagają posortowania przecięć scanlinii z krawędziami względem współrzędnej x"/>
+		<answer correct="true" value="Przy wypełnianiu kolorem wystarcza procedura rysowania linii"/>
+		<answer correct="true" value="Tablica/Lista aktywnych krawędzi zawiera wszystkie krawędzie przecinające się z scanlinią"/>
+	</question>	
+	
+	<question value="Które zdania o Tablicy/Liście aktywnych krawędzi w algorytmie wypełniania wielokąta sa prawdziwe:">
+		<answer value="W preprocessingu AET jest wypełniana wybranymi krawędziami"/>
+		<answer correct="true" value="Współrzędna x punktu przecięcia uaktualniania jest przyrostowo"/>
+		<answer value="Krawędzie są dodawane do AET w czasie liniowo zależnym od liczby krawędzi wielokata"/>
+		<answer correct="true" value="Ymax krawędzi wykorzystywne jest do sprawdzania, czy krawędź usunąć z AET"/>
+	</question>	
+	
+	<question value="Które zdania o algorytmach FloodFill i BoundaryFill są prawdziwe">
+		<answer value="Wysokość stosu jest proporcjonalna do liczby pikseli na brzegu już wypełnionego obszaru "/>
+		<answer value="Na stosie odkładane są punkty już wypełnione"/>
+		<answer correct="true" value="Rozmiar obszaru wypełnienia zależy od przyjętej definicji obszaru (4-ro lub 8-mio spójny)"/>
+		<answer correct="true" value="Algorytm BoundaryFill zawsze wypełni obszar identyczy lub większy niż FloodFill"/>
+	</question>	
+	
+	<question value="Które zdania związane z prawem Webera-Fechnera są prawdziwe">
+		<answer value="Prawo to wynika z falowej natury światła"/>
+		<answer correct="true" value="Reakcja układu biologicznego (wzrok, słuch) jest proporcjonalna do logarytmu bodźca"/>
+		<answer correct="true" value="Aby uzyskać liniową skalę w pokrętle głośności należy użyć potencjometru logarytmicznego"/>
+		<answer value="Efekt pasm Macha wynika z prawa W-F"/>
+	</question>	
+	
+	<question value="Algorytm obcinania Cohena-Sutherlanda:">
+		<answer correct="true" value="Może być łatwo zmodyfikowany do obcinania w 3D"/>
+		<answer correct="true" value=" Wykorzysuje 4 bity do opisu wszystkich obszarów płaszczyzny"/>
+		<answer correct="true" value="Wykorzystuje operację sumy logicznej do szybkiego "zaakceptowania" odcinka"/>
+		<answer value="Oknem obcinającym może być dowolny wielokąt wypukły"/>
+	</question>	
+	
+	<question value="Które zdania o algorytmie Sutherlanda-Hodgmana są prawdziwe">
+		<answer value="Potrzebuje testu przynależności punktu do wnętrza wielokąta obcinanego"/>
+		<answer correct="true" value="Wielokatem obcinanym może być dowolny wielokąt"/>
+		<answer correct="true" value="Główna pętla algorytmu iterowana jest ilością krawędzi okna obcinającego"/>
+		<answer value="Oknem obcinajacym może być dowolny wielokąt"/>
+	</question>	
+	
+	<question value="Które zdania sa prawdziwe?">
+		<answer correct="true" value="Rozdzielczośc druku w technice póltonów wynosi około 100lpi"/>
+		<answer correct="true" value="W technice cyfrowej 256 odcieni szarości i rozdzielczość 2048dpi zapewniają rozdzielczość 100lpi"/>
+		<answer correct="true" value="Metoda średniego drżenia wymaga co najmniej dwukrotnego odczytu obrazu "/>
+		<answer value="Linie rastrowe dla farb CMYK ułożone są naprzemiennie poziomami"/>
+	</question>	
+	
+	<question value="Które zdania o trybach graficznych są prawdziwe?">
+		<answer value="Tryb TrueColor dla rozdzielczości 1024x1024 wymaga ponad 8 MB pamięci obrazu"/>
+		<answer correct="true" value="Tryb SVGA pozwalał na wyświetlenie maksymalnie tylko 256 różnych kolorów"/>
+		<answer correct="true" value="W trybie TrueColor maksymalna liczba odcieni szarości to 256"/>
+		<answer value="W trybie SVGA 8 bitów/piksel było podzielonych wg 3R/2G/3B"/>
+	</question>	
+	
+	<!-- 17 -->
+	<question value="Algorytm WU do kreślenia okręgów:">
+		<answer value="W każdym kroku rysuje dwa piksela o jednakowych intensywnościach"/>
+		<answer value="Jest szybszy niż algorytm Bresenhama"/>
+		<answer value="Wykorzystuje metodę przyrostową dla wyznaczania intensywności pikseli"/>
+		<answer value="Potrzebuje tylko dodawań i mnożeń liczb całkowitych"/>
+	</question>	
+	
+	<question value="Wybierz prawdziwe zdania">
+		<answer value="Kolor jest fizyczną cechą związaną z danym obiektem"/>
+		<answer correct="true" value="Kolor jest psychofizyczną cechą percepcji wzrokowej"/>
+		<answer correct="true" value="Składowe trójchromatyczne RGB można być w prosty sposób wyznaczyć z danego widma"/>
+		<answer value="Za pomocą wybranych 3 barw pierwotnych można uzyskać wszystkie widoczne kolory"/>
+	</question>	
+	
+	<question value="W Prawie Grassmanna">
+		<answer correct="true" value="Każde cztery kolory są liniowo zależne"/>
+		<answer value="Mieszanie farb jest mieszaniem addytywnym"/>
+		<answer correct="true" value="Kolorami podstawowymi przy mieszaniu farb są kolory morski, purpurowy i żółty (CMY)"/>
+		<answer correct="true" value="dowolny kolor może być określony za pomocą pewnych trzech liniowo niezależnych kolorów "/>
+	</question>	
+	
+	<question value="Które zdania o poznanych algorytmach obcinania wielokątów są prawdziwe">
+		<answer value="W przypadkach szczególnych wynikowy wielokąt może mieć samoprzecięcia"/>
+		<answer correct="true" value="Wynik działania algorytmów jest częscią wspólną wielokatów obcinanego i obcinającego"/>
+		<answer value="Liczba wierzchołków wielokąta wynikowego jest niemniejsza niż liczba wierzchołków wielokąta obcinanego"/>
+		<answer correct="true" value="Okno obcinające może zawierać się w obcinanym wielokącie"/>
+	</question>	
+	
+		<question value="Które zdania o formacie JPEG są prawdziwe">
+		<answer correct="true" value="Używa kodowania Huffmana"/>
+		<answer value="Obraz kodowany może zawierać maksymalnie 256 kolorów"/>
+		<answer correct="true" value="Pozwala na znaczącą redukcję rozmiaru pliku"/>
+		<answer correct="true" value="Używana jest transformata cosinusowa do kodowania danych"/>
+	</question>
+	
+	<question value="Gamut">
+		<answer correct="true" value="Określa możliwości odwzorowania kolorów na urządzeniu"/>
+		<answer correct="true" value="Jako standard w Internecie wykorzystywana jest Gamut przestrzeni standardowej sRGB"/>
+		<answer correct="true" value="Monitora jest mniejszy niż gamut występujący w naturze."/>
+		<answer correct="true" value=" Najczęściej przedstawiany jest we współrzędnych chromatycznych x,y"/>
+	</question>	
+	
+	<question value="Które zdania są prawdziwe">
+		<answer value="Model CIE XYZ lepiej niż model Lab nadaje się do liczenia róznic pomiędzy dwoma barwami"/>
+		<answer correct="true" value="Przestrzeń barw oparta na barwach monochromatycznych ma wierzchołki na brzegu \"podkowy XYZ\""/>
+		<answer correct="true" value="Dla współrzędnych trójchromatycznych x,y,z zachodzi x+y+z=1"/>
+		<answer correct="true" value="Składowe trójchromatyczne modelu CIE RGB dla pewnych kolorów przyjmują wartości ujemne"/>
+	</question>	
+	
+	<question value="Które zdania o formacie GIF są prawdziwe">
+		<answer correct="true" value="Maksymalna liczba kolorów w zapisywanym obrazie to 256"/>
+		<answer correct="true" value="Stosowana jest kompresja słownikowa LZW"/>
+		<answer correct="true" value="Zastosowana kompresja jest bezstratna"/>
+		<answer value="Słownik kodowania zapisywany jest na końcu pliku"/>
+	</question>	
+	
+	<question value="Które zdania o algorytmach redukcji kolorów są prawdziwe">
+		<answer value="W algorytmie Octree drzewo ma zawsze 8 poziomów"/>
+		<answer correct="true" value="Nie można przewidzieć ostatecznej liczby kolorów przy redukcji metodą Octree"/>
+		<answer value="W algorytmie Octree wszystkie wynikowe kolory pochodzą z kolorów obrazu wejściowego"/>
+		<answer correct="true" value="Algorytm popularnościowy wykorzystuje paletę najczęściej występujących kolorów w obrazie"/>
+	</question>	
+	
+	<question value="Które zdania o algorytmie Goupta-Sproull są prawdziwe:">
+		<answer value="Używa tylko operacji na liczbach całkowitych"/>
+		<answer value="Intensywność pikseli liniowo zależy od odległości od osi rysowanej prostej"/>
+		<answer correct="true" value="Jest rozszerzeniem algorytmu Bresenhama"/>
+		<answer correct="true" value="Przyjęty model zakłada wzjemne nakładanie się pikseli"/>
+	</question>	
+	
+	<question value="Filtry macierzowe">
+		<answer correct="true" value="Umożliwija translację obrazu o 5 pikseli w poziomie"/>
+		<answer correct="true" value="Umożliwiją uzyskanie negacji obrazu"/>
+		<answer value="Umożliwiają obrót obrazu o 90 stopni"/>
+		<answer value="Umożliwiają zbalansowanie bieli"/>
+	</question>	
+	
+	<question value="Metoda uporządkowanego drżenia">
+		<answer correct="true" value="Do symulowania 256 odcieni za pomocą 6 poziomów potrzebuje macierzy drżenia D6"/>
+		<answer value="Zawsze powiększa rozmiary obrazu wyświetlanego na urządzeniu"/>
+		<answer value="Wymaga znajomości histogramu odcieni szarości"/>
+		<answer correct="true" value="Istnieje prosta rekurencyjna zależność na wyznaczenie macierzy D2n z macierzy Dn"/>
+	</question>	
+	
+	<question value=" Które zdania o modelach kolorów są prawdziwe">
+		<answer correct="true" value="W obu modelach HSV i HLS odcienie szarości znajdują się na ich osiach symetrii"/>
+		<answer value="Jasność kolorów czerwonego, zielonego i białego w modelu HLS jest taka sama"/>
+		<answer correct="true" value="W modelu HLS kolor biały i czarny mają taką samą wartość nasycenia"/>
+		<answer value="Nasycenie odcieni szarości jest nieokreślone"/>
+	</question>	
+	
+	<question value="W algorytmie Bresenhama: ">
+		<answer value="Błedy obliczeń sumują się"/>
+		<answer correct="true" value="Dla policzenia kolejnego punktu krzywej potrzebne są tylko dodawania"/>
+		<answer correct="true" value="Wykorzystuje się metodę przyrostową do policzenia parametru d"/>
+		<answer correct="true" value="Przyjmuje się opis implicite kreślonej krzywej F(x,y)=0"/>
+	</question>	
 </questionCollection>
