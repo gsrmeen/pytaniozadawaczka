@@ -1,4 +1,4 @@
-﻿using Pytaniozadawaczka.QuestionStuff;
+﻿using Pytaniozadawaczka.Models;
 using Pytaniozadawaczka.Windows;
 using System;
 using System.Windows;

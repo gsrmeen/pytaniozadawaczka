@@ -84,7 +84,7 @@
 	<question value="Algorytm obcinania Cohena-Sutherlanda:">
 		<answer correct="true" value="Może być łatwo zmodyfikowany do obcinania w 3D"/>
 		<answer correct="true" value=" Wykorzysuje 4 bity do opisu wszystkich obszarów płaszczyzny"/>
-		<answer correct="true" value="Wykorzystuje operację sumy logicznej do szybkiego "zaakceptowania" odcinka"/>
+		<answer correct="true" value="Wykorzystuje operację sumy logicznej do szybkiego zaakceptowania odcinka"/>
 		<answer value="Oknem obcinającym może być dowolny wielokąt wypukły"/>
 	</question>	
 	
@@ -154,7 +154,7 @@
 	
 	<question value="Które zdania są prawdziwe">
 		<answer value="Model CIE XYZ lepiej niż model Lab nadaje się do liczenia róznic pomiędzy dwoma barwami"/>
-		<answer correct="true" value="Przestrzeń barw oparta na barwach monochromatycznych ma wierzchołki na brzegu \"podkowy XYZ\""/>
+		<answer correct="true" value="Przestrzeń barw oparta na barwach monochromatycznych ma wierzchołki na brzegu podkowy XYZ"/>
 		<answer correct="true" value="Dla współrzędnych trójchromatycznych x,y,z zachodzi x+y+z=1"/>
 		<answer correct="true" value="Składowe trójchromatyczne modelu CIE RGB dla pewnych kolorów przyjmują wartości ujemne"/>
 	</question>	
