@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<questionCollection xmlns="http://www.example.org/palisade/questioncollection" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<!--**************************************************************-->
+	<!-- KOLOS z http://www.mini.pw.edu.pl/~kotowski/gk/GK1.pdf   1-15-->
+	<!--**************************************************************-->
+	<question value=" Które zdania o skalowaniu obrazów są prawdziwe?">
+		<!--ODPOWIEDŹ Z TESTU-->
+		<answer value="Dowolne skalowanie może być zrealizowane jako złożenie trzech operacji Shear"/>
+		<answer correct="true" value="Główna pętla algorytmu musi być iterowana po pikselach obrazu wynikowego"/>
+		<answer value=" Współczynniki skalowania dla osi X i Y muszą być takie same"/>
+		<answer correct="true" value="Modyfikacja algorytmu Bresenhama może być wykorzystana przy skalowaniu"/>
+	</question>
+	
+	
+	
+	
+	<!--**************************************************************-->
+	<!-- KOLOS z http://www.mini.pw.edu.pl/~kotowski/gk/GK1.pdf  15-30-->
+	<!--**************************************************************-->
+	
+</questionCollection>
