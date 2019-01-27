@@ -215,81 +215,103 @@
 	
 	<!-- 1 -->
 	<question value="Które zdania są prawdziwe">
-	<answer value="Interpolacja Gourauda i naiwne generowanie cieni (model Phonga) gubi małe cienie"/>
-	<answer value="Krawędź konturowa łączy ścianę tylną z przednią"/>
-	<answer value="Interpolacja Gourauda jest równoważna interpolacji wektora normalnego"/>
-	<answer value="Wykład z GK odbywał się w czwartki o 14.15"/>
-
+		<answer correct="true" value="Interpolacja Gourauda i naiwne generowanie cieni (model Phonga) gubi małe cienie"/>
+		<answer correct="true" value="Krawędź konturowa łączy ścianę tylną z przednią"/>
+		<answer value="Interpolacja Gourauda jest równoważna interpolacji wektora normalnego"/>
+		<answer value="Wykład z GK odbywał się w czwartki o 14.15"/>
+	</question>	
 	
 	<!-- 2 -->
 	<question value="Krzywa Beziera ma następujące własności:">
-	<answer value="Jest styczna do jej wieloboku w pierwszym i ostatnim punkcie"/>
-	<answer value="Nigdy nie przecina krawędzi wieloboku"/>
-	<answer value="Zaczyna się w pierwszym punkcie wieloboku a kończy w ostatnim"/>
-	<answer value="Przekształcenie afiniczne wieloboku jest równoważne przekształceniu krzywej"/>
-
+		<answer correct="true" value="Jest styczna do jej wieloboku w pierwszym i ostatnim punkcie"/>
+		<answer value="Nigdy nie przecina krawędzi wieloboku"/>
+		<answer correct="true" value="Zaczyna się w pierwszym punkcie wieloboku a kończy w ostatnim"/>
+		<answer correct="true" value="Przekształcenie afiniczne wieloboku jest równoważne przekształceniu krzywej"/>
+	</question>	
+	
 	<!-- 3 -->
 	<question value="Które zdania o krzywych są prawdziwe:">
-	<answer value="Może być opisana parametrycznie lub metodą implicite"/>
-	<answer value="Krzywe wielomianowe mogą być reprezentowane w wielu różnych bazach"/>
-	<answer value="Krzywa jest obrazem przekształcenia z R do Rn"/>
-	<answer value="Krzywa wielomianowa stopnia drugiego jest zawsze płaska"/>
-	
+		<answer correct="true" value="Może być opisana parametrycznie lub metodą implicite"/>
+		<answer correct="true" value="Krzywe wielomianowe mogą być reprezentowane w wielu różnych bazach"/>
+		<answer correct="true" value="Krzywa jest obrazem przekształcenia z R do Rn"/>
+		<answer value="Krzywa wielomianowa stopnia drugiego jest zawsze płaska"/>
+	</question>	
+		
+	<!-- 4 -->
+	<question value="Wierzchołki krzywej Beziera: A(0, 0), B(1, 0), C(0, 1), D(1, 1). Równaniem krzywej w bazie potęgowej jest:">
+		<answer value="Px(t) = 2t^3 - 4t + 1, Py(t) = -3t^3 - t^2 + 2"/>
+		<answer correct="true" value="Px(t) = 4t^3 - 6t^2 + 3t, Py(t) = t^3 + 3t^2 - 3t"/>
+		<answer value="Px(t) = -2t^3 + 6t^2 - 1, Py(t) = t^2 - 2t + 3"/>
+		<answer value=""/>
+	</question>	
+		
+
+D) 
+		
+		
 	<!-- 6 -->
 	<question value="Dwa segmenty krzywej Beziera nie mogą być połączone z ciągłością C2 jeśli">
-	<answer value="Ostatni punkt pierwszego segmentu pokrywa się z pierwszym punktem segmentu drugiego"/>
-	<answer value="Wektory styczne w wspólnym punkcie są identyczne"/>
-	<answer value="Oba segmenty mają ten sam kształt (różnią się tylko skalą)"/>
-	<answer value="Oba segmenty są tego samego stopnia"/>
-
+		<answer value="Ostatni punkt pierwszego segmentu pokrywa się z pierwszym punktem segmentu drugiego"/>
+		<answer value="Wektory styczne w wspólnym punkcie są identyczne"/>
+		<answer correct="true" value="Oba segmenty mają ten sam kształt (różnią się tylko skalą)"/>
+		<answer value="Oba segmenty są tego samego stopnia"/>
+	</question>	
+	
 	<!-- 7 -->
 	<question value="Częściej używane są krzywe Beziera niż krzywe wielomianowe, ponieważ">
-	<answer value="Są bardziej intuicyjne dla użytkowników"/>
-	<answer value="Są szybsze do policzenia niż krzywe w bazie potęgowej"/>
-	<answer value="Mają użyteczne własności"/>
-	<answer value="Nie ma żadnego rozsądnego uzasadnienia"/>
+		<answer correct="true" value="Są bardziej intuicyjne dla użytkowników"/>
+		<answer value="Są szybsze do policzenia niż krzywe w bazie potęgowej"/>
+		<answer correct="true" value="Mają użyteczne własności"/>
+		<answer value="Nie ma żadnego rozsądnego uzasadnienia"/>
+	</question>	
 
 	<!-- 8 -->
 	<question value="Pewien łuk okręgu opisany jest:">
-	<answer value="Krzywą beziera zdefiniowaną wierzchołkami A(0,0), B(0,1), C(1,1), D(1,0)"/>
-	<answer value="Krzywą beziera zdefiniowaną wierzchołkami A(0,0), B(0.5,1), D(1,0)"/>
-	<answer value="Szczególną krzywą Beziera stopnia 4"/>
-	<answer value="Nie można opisać łuku okręgu krzywą Beziera"/>
+		<answer value="Krzywą beziera zdefiniowaną wierzchołkami A(0,0), B(0,1), C(1,1), D(1,0)"/>
+		<answer value="Krzywą beziera zdefiniowaną wierzchołkami A(0,0), B(0.5,1), D(1,0)"/>
+		<answer value="Szczególną krzywą Beziera stopnia 4"/>
+		<answer correct="true" value="Nie można opisać łuku okręgu krzywą Beziera"/>
+	</question>	
 	
 	<!-- 10 -->
 	<question value="Które zdania o rzutowaniu równoległym są prawdziwe">
-	<answer value="Linie równoeległe pozostają równoeległe"/>
-	<answer value="Istnieje jeden szczególny punkt zwany środkiem rzutowania"/>
-	<answer value="Może być wykorzystane do dokładnych pomiarów"/>
-	<answer value="Efekt rzutowania wygląda realistycznie"/>
+		<answer correct="true" value="Linie równoeległe pozostają równoeległe"/>
+		<answer value="Istnieje jeden szczególny punkt zwany środkiem rzutowania"/>
+		<answer correct="true" value="Może być wykorzystane do dokładnych pomiarów"/>
+		<answer value="Efekt rzutowania wygląda realistycznie"/>
+	</question>	
 
 	<!-- 11 -->
 	<question value="Które zdania o rzutowaniu perspektywicznym są prawdziwe">
-	<answer value="Linie równoeległe pozostają równoeległe"/>
-	<answer value="Istnieje jeden szczególny punkt zwany środkiem rzutowania"/>
-	<answer value="Może być wykorzystane do dokładnych pomiarów"/>
-	<answer value="Efekt rzutowania wygląda realistycznie"/>
+		<answer value="Linie równoeległe pozostają równoeległe"/>
+		<answer correct="true" value="Istnieje jeden szczególny punkt zwany środkiem rzutowania"/>
+		<answer value="Może być wykorzystane do dokładnych pomiarów"/>
+		<answer correct="true" value="Efekt rzutowania wygląda realistycznie"/>
+	</question>	
 
 	<!-- 12 -->
 	<question value="Współrzędne jednorodne są stosowane ponieważ:">
-	<answer value="Minimalizują użycie pamięci"/>
-	<answer value="Zwiększają szybkość obliczeń"/>
-	<answer value="Umożliwiają jednakowe reprezentowanie wszystkich przekształceń"/>
-	<answer value="Żadna z powyższych"/>
+		<answer value="Minimalizują użycie pamięci"/>
+		<answer value="Zwiększają szybkość obliczeń"/>
+		<answer correct="true" value="Umożliwiają jednakowe reprezentowanie wszystkich przekształceń"/>
+		<answer value="Żadna z powyższych"/>
+	</question>	
 
 	<!-- 13 -->
 	<question value="Przekształcenie, które nie może być wyrażone poprzez mnożenie macierzy bez współrzędnych jednorodnych to:">
-	<answer value="Rotacje"/>
-	<answer value="Skalowania"/>
-	<answer value="Translacje"/>
-	<answer value="Ścinanie (shearing)"/>
+		<answer value="Rotacje"/>
+		<answer value="Skalowania"/>
+		<answer correct="true" value="Translacje"/>
+		<answer value="Ścinanie (shearing)"/>
+	</question>	
 
 	<!-- 14 -->
 	<question value="W stereografii:">
-	<answer value="Każde z oczu powinno zobaczyć inny obraz"/>
-	<answer value="Specjalne okulary lub monitory muszą być stosowane"/>
-	<answer value="Dwukrotnie liczone jest rzutowanie"/>
-	<answer value="Możemy obserwować tylko obrazy monochromatyczne"/>
+		<answer correct="true" value="Każde z oczu powinno zobaczyć inny obraz"/>
+		<answer correct="true" value="Specjalne okulary lub monitory muszą być stosowane"/>
+		<answer correct="true" value="Dwukrotnie liczone jest rzutowanie"/>
+		<answer value="Możemy obserwować tylko obrazy monochromatyczne"/>
+	</question>	
 	
 	<!-- 15 -->
 	<question value="Poniższa macierz opisuje
@@ -297,107 +319,121 @@
 	sin a cos a 0 0
 	0 0 1 0
 	0 0 0 1">
-	<answer value="Rotacje wokół osi X"/>
-	<answer value="Rotacje wokół osi Y"/>
-	<answer value="Rotacje wokół osi Z"/>
-	<answer value="Żadnej z powyższych"/>
+		<answer value="Rotacje wokół osi X"/>
+		<answer value="Rotacje wokół osi Y"/>
+		<answer value="Rotacje wokół osi Z"/>
+		<answer correct="true" value="Żadnej z powyższych"/>
+	</question>	
 
 	<!-- 16 -->
 	<question value="Punkt M(1, 0, 1, 1) przekształcony przez macierz z poprzedniego pytania (dla a = 90') jest punktem:">
-	<answer value="N(0, 1, 0, 1)
-	<answer value="N(0, 1, 1, 1)
-	<answer value="N(0, 1, 1, 0)
-	<answer value="N(1.41..., -1.41.., 0, 1)
+		<answer value="N(0, 1, 0, 1)"/>
+		<answer correct="true" value="N(0, 1, 1, 1)"/>
+		<answer value="N(0, 1, 1, 0)"/>
+		<answer value="N(1.41..., -1.41.., 0, 1)"/>
+	</question>	
 
 	<!-- 17 -->
 	<question value="Cieniowanie trojkątów (ogólnie wielokątów) jest procesem polegającym na:">
-	<answer value="Zaczernieniu tych trójkątów, które są w cieniu innego obiektu
-	<answer value="Znajdowaniu intensywności (koloru) każdego piksela w każdym trójkącie
-	<answer value="Przekształcaniu trójkątów do powierzchni Beziera
-	<answer value="Żadnym z powyższych
+		<answer value="Zaczernieniu tych trójkątów, które są w cieniu innego obiektu"/>
+		<answer correct="true" value="Znajdowaniu intensywności (koloru) każdego piksela w każdym trójkącie"/>
+		<answer value="Przekształcaniu trójkątów do powierzchni Beziera"/>
+		<answer value="Żadnym z powyższych"/>
+	</question>	
 
 	<!-- 18 -->
 	<question value="Które zdania są prawdziwe">
-	<answer value="Dla siatki wielokątów istnieją 3 podstawowe metody cieniowania: Stałe, Gourauda i Phonga
-	<answer value="Cieniowanie Phonga jest stosowane tylko z interpolacją Phonga
-	<answer value="Cieniowanie Gourauda daje w wielu zastosowaniach zadawalające rezultaty i jest szybkie
-	<answer value="Cieniowanie Gourauda nie wymaga wyznaczania intensywności z modelu Phonga
+		<answer correct="true" value="Dla siatki wielokątów istnieją 3 podstawowe metody cieniowania: Stałe, Gourauda i Phonga"/>
+		<answer value="Cieniowanie Phonga jest stosowane tylko z interpolacją Phonga"/>
+		<answer correct="true" value="Cieniowanie Gourauda daje w wielu zastosowaniach zadawalające rezultaty i jest szybkie"/>
+		<answer value="Cieniowanie Gourauda nie wymaga wyznaczania intensywności z modelu Phonga"/>
+	</question>	
 
 	<!-- 19 -->
 	<question value="Komponent Ambient (odbicie otoczenia)">
-	<answer value="Odnosi się do powierzchni lustrzanych
-	<answer value="Jest zawsze kolorem szarym
-	<answer value="Zależy od kąta pomiędzy wektorem normalnym a wektorem do źródła światła
-	<answer value="Nie zależy od koloru żródła światła
+		<answer value="Odnosi się do powierzchni lustrzanych"/>
+		<answer value="Jest zawsze kolorem szarym"/>
+		<answer value="Zależy od kąta pomiędzy wektorem normalnym a wektorem do źródła światła"/>
+		<answer correct="true" value="Nie zależy od koloru żródła światła"/>
+	</question>	
 
 	<!-- 20 -->
 	<question value="Jaki efekt można symulować, mnożąc intensywność uzyskaną z modelu Phonga przez odległość do obserwatora">
-	<answer value="Perspektywę
-	<answer value="Stereografię
-	<answer value="Odcienie szarości (zmrok)
-	<answer value="Mglę
+		<answer value="Perspektywę"/>
+		<answer value="Stereografię"/>
+		<answer value="Odcienie szarości (zmrok)"/>
+		<answer correct="true" value="Mglę"/>
+	</question>	
 
 	<!-- 21 -->
 	<question value="W modelu Phonga">
-	<answer value="Musimy uwzględniać wszystkie źródła światła zdefiniowane na scenie
-	<answer value="Intensywność wynikowa jest sumą trzech składowych
-	<answer value="Kolor obiektu jest określony poprzez współczynnik odbicia rozproszonego
-	<answer value="W wyrażeniu (cosa)n
-	<answer value="a jest kątem pomiędzy wektorem normalnym a wektorem światła
+		<answer correct="true" value="Musimy uwzględniać wszystkie źródła światła zdefiniowane na scenie"/>
+		<answer correct="true" value="Intensywność wynikowa jest sumą trzech składowych"/>
+		<answer correct="true" value="Kolor obiektu jest określony poprzez współczynnik odbicia rozproszonego"/>
+		<answer value="W wyrażeniu (cosa)n, a jest kątem pomiędzy wektorem normalnym a wektorem światła"/>
+	</question>	
 
 	<!-- 22 -->
 	<question value="Jaki kolor ma żółty przedmiot świetlany kolorem morskim (cyjan) uwzględniając tylko składową rozproszoną">
-	<answer value="Żółty
-	<answer value="Morski
-	<answer value="Zielony
-	<answer value="Inny
+		<answer value="Żółty"/>
+		<answer value="Morski"/>
+		<answer correct="true" value="Zielony"/>
+		<answer value="Inny"/>
+	</question>	
 
 	<!-- 23 -->
 	<question value="Które zdania są prawdziwe">
-	<answer value="Intensywnośc odbicia rozproszonego jest niezależna od pozycji i kierunku obserwatora
-	<answer value="Intensywność odbicia rozproszonego zależy od względnej orientacji źródła światła od powierzchni
-	<answer value="Intensywność odbicia zwierciadlanego nie zależy od kierunku patrzenia
-	<answer value="Rozmiar rozbłysku zależy od kąta pomiędzy wektorem normalnym a promieniem odbitym
+		<answer correct="true" value="Intensywnośc odbicia rozproszonego jest niezależna od pozycji i kierunku obserwatora"/>
+		<answer correct="true" value="Intensywność odbicia rozproszonego zależy od względnej orientacji źródła światła od powierzchni"/>
+		<answer value="Intensywność odbicia zwierciadlanego nie zależy od kierunku patrzenia"/>
+		<answer value="Rozmiar rozbłysku zależy od kąta pomiędzy wektorem normalnym a promieniem odbitym"/>
+	</question>	
 
 	<!-- 24 -->
 	<question value="Które algorytmy pozwalają na poprawne uwzględnienie wielokrotnej przezroczystości (bez załamań)">
-	<answer value="Z-bufor
-	<answer value="Algorytm malarski
-	<answer value="Ray-Casting
-	<answer value="Wszystkie powyższe
+		<answer value="Z-bufor"/>
+		<answer correct="true" value="Algorytm malarski"/>
+		<answer correct="true" value="Ray-Casting"/>
+		<answer value="Wszystkie powyższe"/>
+	</question>	
 
 	<!-- 25 -->
 	<question value="Które zdania o algorytmie Z-bufor są prawdziwe">
-	<answer value="Prawdopodobnie jest to najczęściej stosowany algorytm w grach 3D
-	<answer value="Wymaga dodatkowej tablicy o rozmiarze wyświetlanego obrazu
-	<answer value="Współrzędna "z" każdego aktualnego piksela jest zapamiętywana
-	<answer value="Może być implementowany sprzętowo
+		<answer correct="true" value="Prawdopodobnie jest to najczęściej stosowany algorytm w grach 3D"/>
+		<answer correct="true" value="Wymaga dodatkowej tablicy o rozmiarze wyświetlanego obrazu"/>
+		<answer value="Współrzędna _z_ każdego aktualnego piksela jest zapamiętywana"/>
+		<answer correct="true" value="Może być implementowany sprzętowo"/>
+	</question>	
 
 	<!-- 26 -->
 	<question value="Odrzucanie krawędzi tylnych (Back face culling) jest techniką:">
-	<answer value="Która może zredukować liczbę renderowanych wielokątów o około 50%
-	<answer value="Wykorzystuje znajomość wektorów normalnych do ścian
-	<answer value="Nie może być stosowana do "brył" otwartych
-	<answer value="Dla jednej wypukłej bryły nie wymaga innych algorytmów wyznaczania widoczności
+		<answer correct="true" value="Która może zredukować liczbę renderowanych wielokątów o około 50%"/>
+		<answer correct="true" value="Wykorzystuje znajomość wektorów normalnych do ścian"/>
+		<answer correct="true" value="Nie może być stosowana do brył otwartych"/>
+		<answer correct="true" value="Dla jednej wypukłej bryły nie wymaga innych algorytmów wyznaczania widoczności"/>
+	</question>	
 
 	<!-- 27 -->
 	<question value="Algorytm Ray-casting:">
-	<answer value="Jest bardzo szybki
-	<answer value="Daje realistyczne efekty
-	<answer value="Jego szybkośc nie zależy od stopnia skomplikowania sceny
-	<answer value="Pozwala w prosty sposób renderować powierzchnie lustrzane
+		<answer value="Jest bardzo szybki"/>
+		<answer correct="true" value="Daje realistyczne efekty"/>
+		<answer value="Jego szybkośc nie zależy od stopnia skomplikowania sceny"/>
+		<answer value="Pozwala w prosty sposób renderować powierzchnie lustrzane"/>
+	</question>	
 
 	<!-- 28 -->
 	<question value="Prawo Lamberta">
-	<answer value="Dotyczy składowej rozproszonej w modelu Phonga
-	<answer value="Jest podstawą interpolacji Gourauda
-	<answer value="Jest podstawą interpolacji Phonga
-	<answer value="Określa zależność intensywności źródła światła od odległości od obiektu
+		<answer correct="true" value="Dotyczy składowej rozproszonej w modelu Phonga"/>
+		<answer value="Jest podstawą interpolacji Gourauda"/>
+		<answer value="Jest podstawą interpolacji Phonga"/>
+		<answer value="Określa zależność intensywności źródła światła od odległości od obiektu"/>
+	</question>	
 
 	<!-- 29 -->
 	<question value="Które zdania są prawdziwe">
-	<answer value="Algorytm malarski zawsze jest implementowany wspólnie z Z-buforem
-	<answer value="W pewnym sytuacjach w algorytmie malarskim ściany muszą być dzielone
-	<answer value="Stosując Z-bufor ściany muszą być wcześniej uporządkowane
-	<answer value="Interpolacja Phonga nie dotyczy Ray-tracingu
+		<answer value="Algorytm malarski zawsze jest implementowany wspólnie z Z-buforem"/>
+		<answer correct="true" value="W pewnym sytuacjach w algorytmie malarskim ściany muszą być dzielone"/>
+		<answer value="Stosując Z-bufor ściany muszą być wcześniej uporządkowane"/>
+		<answer correct="true" value="Interpolacja Phonga nie dotyczy Ray-tracingu"/>
+	</question>	
 </questionCollection>
